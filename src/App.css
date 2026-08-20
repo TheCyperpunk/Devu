@@ -1,0 +1,15 @@
+/* Import all CSS modules */
+@import url('./styles/variables.css');
+@import url('./styles/base.css');
+@import url('./styles/components.css');
+@import url('./styles/navigation.css');
+@import url('./styles/hero.css');
+@import url('./styles/sections.css');
+@import url('./styles/contact.css');
+@import url('./styles/footer.css');
+@import url('./styles/responsive.css');
+
+/* Additional React-specific styles if needed */
+.App {
+  min-height: 100vh;
+}
