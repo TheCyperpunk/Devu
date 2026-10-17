@@ -13,6 +13,7 @@ export const projects = [
   { title: 'Revolutionizing Crypto Investment', description: 'Built an on-chain Systematic Investment Plan (SIP) platform enabling automated decentralized investments. Integrated wallet authentication and smart contract execution for transparent asset management.', technologies: ['Solidity', 'Hardhat', 'React.js', 'Node.js', 'Ethers.js', 'Web3.js'], liveLink: '#projects' },
   { title: 'Artificial Intelligence Based Chatbot', description: 'Built a local AI assistant interface supporting multimodal LLMs with vision and chat capabilities. Integrated local models via Ollama with support for RAG, STT, TTS, and web search APIs.', technologies: ['Svelte.js', 'Node.js', 'Docker', 'Ollama', 'TypeScript', 'Python', 'REST APIs', 'LLMs'], liveLink: undefined },
   { title: 'Manual Testing of ShopperStack Website', description: 'Performed manual UI testing on the ShopperStack e-commerce website to identify usability issues. Tested buttons, forms, navigation menus, images, search bars, and page layouts.', technologies: ['Manual UI Testing', 'Quality Assurance'], liveLink: undefined },
+  { title: 'FileSense Scanner', description: 'Developed a hybrid search engine that combines semantic vector search and keyword-based BM25 retrieval to return contextually relevant results from natural-language queries.', technologies: ['Python', 'FastAPI', 'FAISS', 'BM25', 'Sentence Transformers', 'PostgreSQL'], liveLink: undefined },
 ] as const;
 
 export const internships = [
