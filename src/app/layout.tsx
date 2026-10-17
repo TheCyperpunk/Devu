@@ -11,8 +11,8 @@ const themeScript = `(() => {
 })();`;
 
 export const metadata: Metadata = {
-  title: 'Devika TD | Portfolio',
-  description: 'Devika TD — BTech Computer Science Engineering student and Python full-stack developer.',
+  title: 'Devika TD — Make Every Second Count',
+  description: 'Devika TD — Python and full-stack developer portfolio.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
