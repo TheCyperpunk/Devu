@@ -16,3 +16,12 @@
 .forge-card--red .signal-bars { color:var(--red); }
 .signal-bars i { display:block; width:8px; background:currentColor; transform:skew(-18deg); }
 .signal-bars i:nth-child(1){height:12px}.signal-bars i:nth-child(2){height:21px}.signal-bars i:nth-child(3){height:29px}.signal-bars i:nth-child(4){height:18px}
+
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-band { position:relative; z-index:2; margin:0 -1.2%; overflow:hidden; padding:.8rem 0; transform:rotate(-.8deg) skewX(-1deg) scale(1.02); transform-origin:center; box-shadow:0 4px 0 rgb(0 0 0 / .18); }
+.ticker-track { display:flex; width:max-content; animation:ticker-scroll 24s linear infinite; }
+.ticker-content { display:flex; align-items:center; gap:2.3rem; min-width:50vw; padding-right:2.3rem; white-space:nowrap; font-size:.82rem; letter-spacing:.08em; }
+.ticker-content b { font-family:'Barlow Condensed',Impact,'Arial Narrow',sans-serif; font-size:1.25rem; font-style:italic; letter-spacing:.02em; }
+.ticker-content span { color:var(--red); font-size:1.35rem; line-height:1; }
+.ticker-band:hover .ticker-track { animation-play-state:paused; }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation:none; } }
