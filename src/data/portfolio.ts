@@ -26,4 +26,4 @@ export const education = [
   { degree: 'Higher Secondary Education', institution: 'GMGHSS Kunnamkulam', detail: 'Science Stream', duration: '2020 – 2022', score: 'Percentage: 93%' },
 ] as const;
 
-export const skills = ['HTML', 'CSS', 'Python', 'SQL', 'Django'] as const;
+export const skills = ['HTML', 'CSS', 'JavaScript', 'Python', 'SQL', 'Django'] as const;
