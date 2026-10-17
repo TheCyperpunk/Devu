@@ -11,7 +11,7 @@ const themeScript = `(() => {
 })();`;
 
 export const metadata: Metadata = {
-  title: 'Devika TD — Make Every Second Count',
+  title: 'Devika TD',
   description: 'Devika TD — Python and full-stack developer portfolio.',
 };
 
