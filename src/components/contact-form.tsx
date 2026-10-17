@@ -24,5 +24,5 @@ export default function ContactForm() {
 }
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
-  return <label className="block text-sm font-semibold text-[var(--foreground)]">{label}<span className="mt-2 block">{children}</span></label>;
+  return <label className="mono-label block text-[var(--foreground)]">{label}<span className="mt-2 block">{children}</span></label>;
 }
