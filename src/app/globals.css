@@ -5,3 +5,14 @@
 @keyframes fade-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}.animate-fade-up{animation:fade-up .7s ease-out both}
 @layer components{.mono-label{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.display-title{font-family:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;font-weight:800;letter-spacing:-.045em;text-transform:uppercase}.field{width:100%;border:1px solid var(--border);border-radius:0;background:var(--input);padding:.8rem 1rem;color:var(--foreground);outline:none;font-family:'IBM Plex Mono',monospace;font-size:.78rem}.field::placeholder{color:var(--secondary)}.field:focus{border-color:var(--volt);box-shadow:0 0 0 2px rgb(223 255 0 / .16)}.volt-button{background:var(--volt);color:var(--background);border:1px solid var(--volt);border-radius:0;font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;transition:transform .2s,background .2s}.volt-button:hover{background:#efff72;transform:translateY(-2px)}.outline-button{border:1px solid var(--border-strong);border-radius:0;color:var(--foreground);font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;transition:border-color .2s,color .2s}.outline-button:hover{border-color:var(--volt);color:var(--volt)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.forge-card { box-shadow: inset 0 0 35px rgb(0 0 0 / .12); }
+.forge-card__bar { position:absolute; left:0; top:0; height:3px; width:48px; background:var(--volt); }
+.forge-card--red .forge-card__bar { background:var(--red); }
+.forge-card__arrow { color:var(--volt); transition:transform .2s, color .2s; }
+.forge-card--red .forge-card__arrow { color:var(--red); }
+.forge-card:hover .forge-card__arrow { transform:translate(3px,-3px); }
+.signal-bars { display:flex; align-items:flex-end; gap:4px; height:34px; width:max-content; color:var(--volt); }
+.forge-card--red .signal-bars { color:var(--red); }
+.signal-bars i { display:block; width:8px; background:currentColor; transform:skew(-18deg); }
+.signal-bars i:nth-child(1){height:12px}.signal-bars i:nth-child(2){height:21px}.signal-bars i:nth-child(3){height:29px}.signal-bars i:nth-child(4){height:18px}
