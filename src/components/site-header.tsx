@@ -1,6 +1,6 @@
 'use client';
 
-import { FileText, Github, Linkedin, Mail, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import ThemeToggle from '@/components/theme-toggle';
 import { personalInfo } from '@/data/portfolio';
@@ -12,8 +12,6 @@ const links = [
   ['projects', 'WORK'],
   ['experience', 'EXPERIENCE'],
 ] as const;
-
-const resumeRequest = `mailto:${personalInfo.email}?subject=${encodeURIComponent('Resume request')}`;
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,10 +32,7 @@ export default function SiteHeader() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <SocialStrip />
-          <ThemeToggle />
-        </div>
+        <div className="hidden md:block"><ThemeToggle /></div>
 
         <div className="flex items-center gap-3 md:hidden">
           <ThemeToggle />
@@ -52,23 +47,8 @@ export default function SiteHeader() {
               {label} <span className="text-[var(--volt)]">0{index + 1}</span>
             </a>
           ))}
-          <SocialStrip />
         </div>
       </nav>
     </header>
-  );
-}
-
-function SocialStrip() {
-  const iconClass = 'inline-flex h-10 w-10 items-center justify-center border border-[var(--border)] text-[var(--muted)] transition-colors hover:border-[var(--volt)] hover:text-[var(--volt)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]';
-
-  return (
-    <div className="flex items-center gap-2">
-      <span className="mono-label hidden whitespace-nowrap text-[var(--secondary)] xl:inline">FIND ME ON</span>
-      <a href={personalInfo.github} target="_blank" rel="noreferrer" className={iconClass} aria-label="Open Devika TD's GitHub profile" title="GitHub"><Github className="h-4 w-4" /></a>
-      <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className={iconClass} aria-label="Open Devika TD's LinkedIn profile" title="LinkedIn"><Linkedin className="h-4 w-4" /></a>
-      <a href={`mailto:${personalInfo.email}`} className={iconClass} aria-label="Email Devika TD" title="Email"><Mail className="h-4 w-4" /></a>
-      <a href={resumeRequest} className="mono-label inline-flex h-10 items-center gap-2 border border-[var(--border)] px-3 text-[var(--foreground)] transition-colors hover:border-[var(--volt)] hover:text-[var(--volt)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]" aria-label="Request Devika TD's resume by email" title="Request resume"><FileText className="h-4 w-4" /> <span className="hidden xl:inline">RESUME</span></a>
-    </div>
   );
 }
